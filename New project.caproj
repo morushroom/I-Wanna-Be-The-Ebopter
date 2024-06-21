@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Аудио</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Браузер</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Клавиатура</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Мышь</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Спрайт</plugin>
+        <plugin author="Scirra" id="Text" version="1">Текст</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Плиточный Фон</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Карта плитки</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Касание</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Геймпад</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Пуля</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Платформа</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Уничтожение вне макета</behavior>
+        <behavior author="Scirra" id="solid" version="1">Твердый</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="warpripple">Деформация пульсации </effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="3206956448522659">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="663711553584552">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Text" sid="2985603725420557">
+            <plugin id="Text" />
+            <effects>
+                <effect-type name="Деформацияпульсации">
+                    <effect id="warpripple" />
+                </effect-type>
+            </effects>
+        </object-type>
+        <object-type name="ebopter" sid="198602475422426">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="canmove" sid="431755504093540" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Уничтожениевнемакета" sid="962705226651530">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Платформа" sid="231794874197624">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="411605357436521" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.3125" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.6875" y="1" />
+                            <point x="0.25" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bullet" sid="385310903903272">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Уничтожениевнемакета" sid="967325475848351">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Пуля" sid="905593205518846">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="227822468658520" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spikes" sid="422035867835006">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles>
+                <tile id="0">
+                    <collision-poly>
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="0.5" />
+                    </collision-poly>
+                </tile>
+                <tile id="1">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0.5" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="2">
+                    <collision-poly>
+                        <point x="0.5" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="3">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0.5" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="spawn" sid="348117697216820">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="SPWN" pingpong="0" repeatcount="1" repeatto="0" sid="423253894526701" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="505312497285954">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="963645025151997">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground3" sid="827214174587349">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="107826430883311">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground4" sid="974984505520720">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="545342202289392">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground5" sid="889051475775483">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="570132856985681">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="savepoint" sid="422139886201526">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="original" pingpong="1" repeatcount="3" repeatto="0" sid="989783145867104" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.4375">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0625" />
+                            <point x="0.944444" y="0.0625" />
+                            <point x="0.944444" y="0.9375" />
+                            <point x="0.0555556" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.4375">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0625" />
+                            <point x="0.944444" y="0.0625" />
+                            <point x="0.944444" y="0.9375" />
+                            <point x="0.0555556" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Level 0 test.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>engine.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>engine</name>
+    <events>
+        <variable comment="Spawn Y coordinate" constant="0" name="SpawnY" sid="762357121663561" static="0" type="number">0</variable>
+        <variable comment="Spawn X coordinate" constant="0" name="SpawnX" sid="927964302853675" static="0" type="number">0</variable>
+        <variable comment="Room number" constant="0" name="level" sid="851027361813970" static="0" type="number">0</variable>
+        <event-block sid="194519696519918">
+            <conditions>
+                <condition id="2" name="Клавиша нажата" sid="224783602706139" type="Keyboard">
+                    <param id="0" name="Клавиша">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Установить отражение" sid="443934875985357" type="ebopter">
+                    <param id="0" name="Состояние">1</param>
+                </action>
+                <action behavior="Платформа" id="7" name="Установить управление" sid="579986744133521" type="ebopter">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="930680762350817">
+            <conditions>
+                <condition id="2" name="Клавиша нажата" sid="620803828838421" type="Keyboard">
+                    <param id="0" name="Клавиша">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Установить отражение" sid="340821611183694" type="ebopter">
+                    <param id="0" name="Состояние">0</param>
+                </action>
+                <action behavior="Платформа" id="7" name="Установить управление" sid="213557167794809" type="ebopter">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="520698650107044">
+            <conditions>
+                <condition id="2" name="Клавиша нажата" sid="454357089978205" type="Keyboard">
+                    <param id="0" name="Клавиша">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Платформа" id="7" name="Установить управление" sid="957152393763578" type="ebopter">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="482402722081425">
+            <conditions>
+                <condition id="0" name="Клавиша нажата" sid="327839846592636" type="Keyboard">
+                    <param id="0" name="Клавиша">88</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="875988699265927" type="System">
+                    <param id="0" name="Object to create">bullet</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">ebopter.X</param>
+                    <param id="3" name="Y">ebopter.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="251580168924519">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Отражается" sid="445455139632664" type="ebopter" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Пуля" id="3" name="Задать угол движения" sid="997728171773423" type="bullet">
+                            <param id="0" name="Угол">360</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120506990789426">
+                    <conditions>
+                        <condition id="7" name="Отражается" sid="152815009935232" type="ebopter" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Пуля" id="3" name="Задать угол движения" sid="576456064118029" type="bullet">
+                            <param id="0" name="Угол">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="464033890217341">
+            <conditions>
+                <condition id="0" name="Клавиша нажата" sid="491693597864231" type="Keyboard">
+                    <param id="0" name="Клавиша">82</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="724329019185843" type="ebopter" />
+                <action id="-15" name="Set visible" sid="494666654259139" type="Text">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="339565823021807" type="System">
+                    <param id="0" name="Object to create">ebopter</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">spawn.X</param>
+                    <param id="3" name="Y">spawn.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="308593502848182">
+            <conditions>
+                <condition id="0" name="Клавиша нажата" sid="318706271788583" type="Keyboard">
+                    <param id="0" name="Клавиша">82</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="397590706629613" type="System">
+                    <param id="0" name="Slot">&quot;sav&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="145895157172700">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="915703114898947" type="ebopter" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="479425172399804" type="Text">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="822011950888585">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="123922404570088">
+            <conditions>
+                <condition id="0" name="В столкновении с другим объектом" sid="996355337324810" type="ebopter">
+                    <param id="0" name="Объект">spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="640012875581510" type="ebopter" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="903840848164007" title="save">
+            <sub-events>
+                <event-block sid="717150073346894">
+                    <conditions>
+                        <condition id="0" name="В столкновении с другим объектом" sid="997872310048639" type="bullet">
+                            <param id="0" name="Объект">savepoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Старт" sid="562075880407821" type="savepoint">
+                            <param id="0" name="Из">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="994775170718626" type="spawn">
+                            <param id="0" name="Object">ebopter</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-36" name="Save" sid="373979021325879" type="System">
+                            <param id="0" name="Slot">&quot;sav&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="157041280443492" title="levelsensor">
+            <sub-events>
+                <event-block sid="562446985823532">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="258636900330437" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="893130421308612" type="System">
+                            <param id="0" name="Object to create">ebopter</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">spawn.X</param>
+                            <param id="3" name="Y">spawn.Y</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="666830695133753" type="Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="682023528918124">
+                            <conditions>
+                                <condition id="4" name="Session key exists" sid="575398341973439" type="WebStorage">
+                                    <param id="0" name="Key">&quot;sav&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-37" name="Load" sid="235159335673089" type="System">
+                                    <param id="0" name="Slot">&quot;sav&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="113422788077413">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
